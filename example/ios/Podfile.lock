@@ -1,7 +1,7 @@
 PODS:
   - agora_chat_sdk (0.0.1):
     - Flutter
-    - HyphenateChat (= 4.5.0)
+    - HyphenateChat (= 4.10.2)
   - agora_chat_uikit (0.0.1):
     - Flutter
   - audioplayers_darwin (0.0.1):
@@ -45,7 +45,7 @@ PODS:
   - Flutter (1.0.0)
   - flutter_localization (0.0.1):
     - Flutter
-  - HyphenateChat (4.5.0)
+  - HyphenateChat (4.10.2)
   - image_picker_ios (0.0.1):
     - Flutter
   - integration_test (0.0.1):
@@ -148,7 +148,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/video_thumbnail/ios"
 
 SPEC CHECKSUMS:
-  agora_chat_sdk: b748c59817b13c72b2e168f0477d950e94d3e560
+  agora_chat_sdk: 27ce409bc9c3608b02f0e1a1f135610113f3f022
   agora_chat_uikit: 84000743f5e520d9840936462ff6c7075f728c4e
   audioplayers_darwin: 877d9a4d06331c5c374595e46e16453ac7eafa40
   chat_uikit_keyboard_panel: 67cdf0084a828cc82c53c7065b54d92b9fc8951e
@@ -157,7 +157,7 @@ SPEC CHECKSUMS:
   file_picker: 09aa5ec1ab24135ccd7a1621c46c84134bfd6655
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_localization: f43b18844a2b3d2c71fd64f04ffd6b1e64dd54d4
-  HyphenateChat: bf4cfa65a83ffa210803fdc91263b4891fb510ee
+  HyphenateChat: 6924f613947f6301bee909fc12c3bb01b50f52c6
   image_picker_ios: c560581cceedb403a6ff17f2f816d7fea1421fc1
   integration_test: 13825b8a9334a850581300559b8839134b124670
   libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
