@@ -632,32 +632,30 @@ class MessagesViewController extends ChangeNotifier
       maxWidth: 200,
       quality: 80,
     );
-    if (imageData != null) {
-      final directory = await getApplicationCacheDirectory();
-      String thumbnailPath =
-          '${directory.path}/thumbnail_${Random().nextInt(999999999)}.jpeg';
-      final file = File(thumbnailPath);
-      file.writeAsBytesSync(imageData);
+    final directory = await getApplicationCacheDirectory();
+    String thumbnailPath =
+        '${directory.path}/thumbnail_${Random().nextInt(999999999)}.jpeg';
+    final file = File(thumbnailPath);
+    file.writeAsBytesSync(imageData);
 
-      final videoFile = File(path);
+    final videoFile = File(path);
 
-      Image.file(file)
-          .image
-          .resolve(const ImageConfiguration())
-          .addListener(ImageStreamListener((info, synchronousCall) {
-        final msg = Message.createVideoSendMessage(
-          targetId: profile.id,
-          chatType: chatType,
-          filePath: path,
-          thumbnailLocalPath: file.path,
-          width: info.image.width.toDouble(),
-          height: info.image.height.toDouble(),
-          fileSize: videoFile.lengthSync(),
-          displayName: videoFile.path.split('/').last,
-        );
-        sendMessage(msg);
-      }));
-    }
+    Image.file(file)
+        .image
+        .resolve(const ImageConfiguration())
+        .addListener(ImageStreamListener((info, synchronousCall) {
+      final msg = Message.createVideoSendMessage(
+        targetId: profile.id,
+        chatType: chatType,
+        filePath: path,
+        thumbnailLocalPath: file.path,
+        width: info.image.width.toDouble(),
+        height: info.image.height.toDouble(),
+        fileSize: videoFile.lengthSync(),
+        displayName: videoFile.path.split('/').last,
+      );
+      sendMessage(msg);
+    }));
   }
 
   Future<void> sendFileMessage(

@@ -1497,7 +1497,9 @@ class _ThreadMessagesViewState extends State<ThreadMessagesView>
     if (ChatUIKitSettings.msgItemLongPressActions
                 .contains(ChatUIKitActionType.reaction) ==
             false ||
-        ChatUIKitSettings.enableMessageReaction == false) return null;
+        ChatUIKitSettings.enableMessageReaction == false) {
+      return null;
+    }
 
     void closeMenu() {
       if (ChatUIKitSettings.messageLongPressMenuStyle ==

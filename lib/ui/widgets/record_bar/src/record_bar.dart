@@ -145,8 +145,6 @@ class RecordBarController {
         return 'wav';
       case AudioEncoder.pcm16bits:
         return 'pcm';
-      default:
-        return '';
     }
   }
 }

@@ -2,7 +2,6 @@ group 'com.ease.em_chat_uikit'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.10'
     repositories {
         google()
         mavenCentral()
@@ -10,7 +9,6 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -25,6 +23,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+
+    if (project.android.hasProperty("namespace")) {
+        namespace = "com.ease.em_chat_uikit"
+    }
+
     compileSdkVersion 31
 
     compileOptions {
@@ -33,12 +36,11 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_1_8
     }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
-        test.java.srcDirs += 'src/test/kotlin'
     }
 
     defaultConfig {
@@ -46,19 +48,7 @@ android {
         consumerProguardFiles 'consumer-proguard-rules.txt'
     }
     dependencies {
-        testImplementation 'org.jetbrains.kotlin:kotlin-test'
+        // testImplementation 'org.jetbrains.kotlin:kotlin-test'
         testImplementation 'org.mockito:mockito-core:5.0.0'
-    }
-
-    testOptions {
-        unitTests.all {
-            useJUnitPlatform()
-
-            testLogging {
-               events "passed", "skipped", "failed", "standardOut", "standardError"
-               outputs.upToDateWhen {false}
-               showStandardStreams = true
-            }
-        }
     }
 }

@@ -2320,7 +2320,9 @@ class _MessagesViewState extends State<MessagesView>
     if (ChatUIKitSettings.msgItemLongPressActions
                 .contains(ChatUIKitActionType.reaction) ==
             false ||
-        ChatUIKitSettings.enableMessageReaction == false) return null;
+        ChatUIKitSettings.enableMessageReaction == false) {
+      return null;
+    }
     List<MessageReaction>? reactions = model.reactions;
 
     void closeMenu() {

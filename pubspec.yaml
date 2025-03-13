@@ -22,13 +22,13 @@ dependencies:
 
   path_provider: 2.1.4
 
-  file_picker: 8.0.5
+  file_picker: 9.0.2
 
   audioplayers: 6.0.0
 
   image_picker: 1.1.2
 
-  video_thumbnail: 0.5.3
+  get_thumbnail_video: 0.7.3
 
   video_player: 2.9.1
 

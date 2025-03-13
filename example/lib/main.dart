@@ -24,6 +24,7 @@ const token = '';
 const bool appDebug = false;
 
 void main() async {
+  assert(appKey.isNotEmpty, 'appKey is required');
   await ChatUIKit.instance.init(
     options: Options(
       appKey: appKey,
