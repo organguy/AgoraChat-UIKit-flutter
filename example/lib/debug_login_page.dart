@@ -31,7 +31,6 @@ class _DebugLoginPageState extends State<DebugLoginPage> {
                 } else {
                   showDialog(context);
                 }
-                showDialog(context);
               },
               child: const Text('Login'),
             ),
