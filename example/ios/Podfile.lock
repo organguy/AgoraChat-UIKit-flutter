@@ -6,6 +6,7 @@ PODS:
     - Flutter
   - audioplayers_darwin (0.0.1):
     - Flutter
+    - FlutterMacOS
   - chat_uikit_keyboard_panel (0.0.1):
     - Flutter
   - DKImagePickerController/Core (4.3.9):
@@ -68,7 +69,7 @@ PODS:
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - record_darwin (1.0.0):
+  - record_ios (1.1.0):
     - Flutter
   - SDWebImage (5.20.0):
     - SDWebImage/Core (= 5.20.0)
@@ -89,7 +90,7 @@ PODS:
 DEPENDENCIES:
   - agora_chat_sdk (from `.symlinks/plugins/agora_chat_sdk/ios`)
   - agora_chat_uikit (from `.symlinks/plugins/agora_chat_uikit/ios`)
-  - audioplayers_darwin (from `.symlinks/plugins/audioplayers_darwin/ios`)
+  - audioplayers_darwin (from `.symlinks/plugins/audioplayers_darwin/darwin`)
   - chat_uikit_keyboard_panel (from `.symlinks/plugins/chat_uikit_keyboard_panel/ios`)
   - file_picker (from `.symlinks/plugins/file_picker/ios`)
   - Flutter (from `Flutter`)
@@ -98,7 +99,7 @@ DEPENDENCIES:
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - integration_test (from `.symlinks/plugins/integration_test/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
-  - record_darwin (from `.symlinks/plugins/record_darwin/ios`)
+  - record_ios (from `.symlinks/plugins/record_ios/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
   - sqflite_darwin (from `.symlinks/plugins/sqflite_darwin/darwin`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
@@ -119,7 +120,7 @@ EXTERNAL SOURCES:
   agora_chat_uikit:
     :path: ".symlinks/plugins/agora_chat_uikit/ios"
   audioplayers_darwin:
-    :path: ".symlinks/plugins/audioplayers_darwin/ios"
+    :path: ".symlinks/plugins/audioplayers_darwin/darwin"
   chat_uikit_keyboard_panel:
     :path: ".symlinks/plugins/chat_uikit_keyboard_panel/ios"
   file_picker:
@@ -136,8 +137,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/integration_test/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
-  record_darwin:
-    :path: ".symlinks/plugins/record_darwin/ios"
+  record_ios:
+    :path: ".symlinks/plugins/record_ios/ios"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
   sqflite_darwin:
@@ -148,29 +149,29 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/video_player_avfoundation/darwin"
 
 SPEC CHECKSUMS:
-  agora_chat_sdk: 27ce409bc9c3608b02f0e1a1f135610113f3f022
-  agora_chat_uikit: 84000743f5e520d9840936462ff6c7075f728c4e
-  audioplayers_darwin: 877d9a4d06331c5c374595e46e16453ac7eafa40
-  chat_uikit_keyboard_panel: 67cdf0084a828cc82c53c7065b54d92b9fc8951e
+  agora_chat_sdk: c971710a18b05c37d13f28a865efdb4b1bdb62fa
+  agora_chat_uikit: f7fb333151269c8db59fe9b134038e1687cdc5be
+  audioplayers_darwin: 4f9ca89d92d3d21cec7ec580e78ca888e5fb68bd
+  chat_uikit_keyboard_panel: 1307f7057e897497260baebf4a3db88a8b74b6fa
   DKImagePickerController: 946cec48c7873164274ecc4624d19e3da4c1ef3c
   DKPhotoGallery: b3834fecb755ee09a593d7c9e389d8b5d6deed60
-  file_picker: b159e0c068aef54932bb15dc9fd1571818edaf49
+  file_picker: a0560bc09d61de87f12d246fc47d2119e6ef37be
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_localization: f43b18844a2b3d2c71fd64f04ffd6b1e64dd54d4
-  get_thumbnail_video: b9a180957daed3e9179e66268db51d8798e41f65
+  flutter_localization: 72299fb6cb4e51cae587bd953ed0b958040b71e6
+  get_thumbnail_video: 1a754d46b860dffefcc57b7290a43089cd5d7e58
   HyphenateChat: 6924f613947f6301bee909fc12c3bb01b50f52c6
-  image_picker_ios: c560581cceedb403a6ff17f2f816d7fea1421fc1
-  integration_test: 252f60fa39af5e17c3aa9899d35d908a0721b573
+  image_picker_ios: 7fe1ff8e34c1790d6fff70a32484959f563a928a
+  integration_test: 4a889634ef21a45d28d50d622cf412dc6d9f586e
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
-  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
-  record_darwin: 3b1a8e7d5c0cbf45ad6165b4d83a6ca643d929c3
+  path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
+  record_ios: f75fa1d57f840012775c0e93a38a7f3ceea1a374
   SDWebImage: 73c6079366fea25fa4bb9640d5fb58f0893facd8
-  shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
-  sqflite_darwin: 5a7236e3b501866c1c9befc6771dfd73ffb8702d
+  shared_preferences_foundation: 9e1978ff2562383bd5676f64ec4e9aa8fa06a6f7
+  sqflite_darwin: 20b2a3a3b70e43edae938624ce550a3cbf66a3d0
   SwiftyGif: 706c60cf65fa2bc5ee0313beece843c8eb8194d4
-  url_launcher_ios: 5334b05cef931de560670eeae103fd3e431ac3fe
-  video_player_avfoundation: 7c6c11d8470e1675df7397027218274b6d2360b3
+  url_launcher_ios: 694010445543906933d732453a59da0a173ae33d
+  video_player_avfoundation: 2cef49524dd1f16c5300b9cd6efd9611ce03639b
 
 PODFILE CHECKSUM: 7be2f5f74864d463a8ad433546ed1de7e0f29aef
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
