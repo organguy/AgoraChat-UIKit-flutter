@@ -11,14 +11,15 @@ abstract mixin class RoomObserver implements ChatUIKitObserverBase {
 
   void onAllowListRemovedFromChatRoom(String roomId, List<String> members) {}
 
-  void onAnnouncementChangedFromChatRoom(String roomId, String announcement) {}
+  void onAnnouncementChangedFromChatRoom(String roomId, String? announcement) {}
 
   void onChatRoomDestroyed(String roomId, String? roomName) {}
 
   void onMemberExitedFromChatRoom(
       String roomId, String? roomName, String participant) {}
 
-  void onMemberJoinedFromChatRoom(String roomId, String participant) {}
+  void onMemberJoinedFromChatRoom(
+      String roomId, String participant, String? ext) {}
 
   void onMuteListAddedFromChatRoom(
       String roomId, List<String> mutes, String? expireTime) {}
