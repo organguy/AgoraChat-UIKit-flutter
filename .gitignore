@@ -16,7 +16,6 @@ migrate_working_dir/
 *.iws
 .idea/
 
-
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
@@ -33,7 +32,6 @@ migrate_working_dir/
 .pub/
 /build/
 
-
 # Symbolication related
 app.*.symbols
 
@@ -46,3 +44,7 @@ app.*.map.json
 /android/app/release
 /example/iOS/Podfile.lock
 /example/pubspec.lock
+
+# FVM Version Cache
+.fvm/
+.fvmrc
