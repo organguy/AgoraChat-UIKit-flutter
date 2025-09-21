@@ -1,5 +1,5 @@
 export 'package:audioplayers/audioplayers.dart';
-export 'package:file_picker/file_picker.dart';
+export 'package:file_selector/file_selector.dart';
 export 'package:image_picker/image_picker.dart';
 export 'package:agora_chat_sdk/agora_chat_sdk.dart';
 export 'package:record/record.dart';

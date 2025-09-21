@@ -355,9 +355,8 @@ class _ChatMessagesViewState extends State<ChatMessagesView> {
   }
 
   void _openFilePicker() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles();
-    if (result != null) {
-      PlatformFile? file = result.files.first;
+    final XFile? file = await openFile();
+    if (file != null) {
       _sendFile(file);
     }
   }
@@ -386,12 +385,13 @@ class _ChatMessagesViewState extends State<ChatMessagesView> {
     }
   }
 
-  void _sendFile(PlatformFile? file) async {
+  void _sendFile(XFile? file) async {
     if (file != null) {
+      final fileSize = await file.length();
       ChatMessage fileMsg = ChatMessage.createFileSendMessage(
         targetId: widget.conversation.id,
-        filePath: file.path!,
-        fileSize: file.size,
+        filePath: file.path,
+        fileSize: fileSize,
         displayName: file.name,
       );
       fileMsg.chatType = ChatType.values[widget.conversation.type.index];
